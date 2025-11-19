@@ -24,24 +24,24 @@ import { WritingSkill } from "@/types/skills";
 
 const fireworks = createOpenAI({
   baseURL: "https://api.fireworks.ai/inference/v1",
-  apiKey: process.env.FIREWORKS_API_KEY,
+  apiKey: process.env.FIREWORKS_API_KEY || "placeholder_fireworks_key",
 });
 
 const groq1 = createOpenAI({
   baseURL: "https://api.groq.com/openai/v1",
-  apiKey: process.env.GROQ_API_KEY_1,
+  apiKey: process.env.GROQ_API_KEY_1 || "placeholder_groq_key_1",
 });
 const groq2 = createOpenAI({
-  baseURL: "https://api.groq.com/openai/v1",
-  apiKey: process.env.GROQ_API_KEY_2,
+  baseURL: "https://api/groq.com/openai/v1",
+  apiKey: process.env.GROQ_API_KEY_2 || "placeholder_groq_key_2",
 });
 const groq3 = createOpenAI({
-  baseURL: "https://api.groq.com/openai/v1",
-  apiKey: process.env.GROQ_API_KEY_3,
+  baseURL: "https://api/groq.com/openai/v1",
+  apiKey: process.env.GROQ_API_KEY_3 || "placeholder_groq_key_3",
 });
 const groq4 = createOpenAI({
-  baseURL: "https://api.groq.com/openai/v1",
-  apiKey: process.env.GROQ_API_KEY_4,
+  baseURL: "https://api/groq.com/openai/v1",
+  apiKey: process.env.GROQ_API_KEY_4 || "placeholder_groq_key_4",
 });
 
 export async function getSpeakingExaminerResponse(messages: CoreMessage[]) {
